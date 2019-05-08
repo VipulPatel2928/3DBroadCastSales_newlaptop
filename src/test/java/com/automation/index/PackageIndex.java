@@ -9,12 +9,14 @@ import com.automation.indexpage.PackageIndexpage;
 import com.automation.init.SeleniumInit;
 import com.automation.utility.Common;
 import com.automation.utility.Common_demo;
+import com.automation.utility.Retry;
 import com.automation.utility.TestData;
 import com.aventstack.extentreports.Status;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 public class PackageIndex extends SeleniumInit {
+
 
 	public static int step, numberOfFailure = 1;
 	SoftAssert softassertion = new SoftAssert();
@@ -25,7 +27,7 @@ public class PackageIndex extends SeleniumInit {
 		test_package = test;
 		System.out.println("Get Test Method called");
 		//test.log(LogStatus.INFO, "Step 5");
-		test_package.log(LogStatus.INFO, "Step 5");
+		//test_package.log(LogStatus.INFO, "Step 5");
 	}
 	
 	public static void getlogger(com.aventstack.extentreports.ExtentTest parent) {
@@ -57,6 +59,7 @@ public class PackageIndex extends SeleniumInit {
 			Common.logveri("-----> 3dbroadcastsales home page not open <-----");
 			Common.AssertFailed();
 			Common.makeScreenshot(driver, "SignUpFailed");
+			
 		}
 
 		Common.logstep("Step" + (step++) + ": Click on the SignUp menu");

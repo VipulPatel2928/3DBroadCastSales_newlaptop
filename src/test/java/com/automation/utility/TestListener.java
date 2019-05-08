@@ -13,6 +13,7 @@ import com.automation.utility.ExtentManager;
 import com.automation.utility.ExtentTestManager;
 import com.automation.index.PackageIndex;
 import com.automation.init.SeleniumInit;
+import com.automation.utility.Retry;
  
 
 public class TestListener extends SeleniumInit implements ITestListener {
@@ -46,7 +47,7 @@ public class TestListener extends SeleniumInit implements ITestListener {
 	        System.out.println("I am in onTestStart method " +  getTestMethodName(iTestResult) + " start");
 	        //Start operation for extentreports.
 	        test = ExtentTestManager.startTest(iTestResult.getMethod().getMethodName(),testcase_description);
-	        test.log(LogStatus.INFO, "Step 1");
+	      //  test.log(LogStatus.INFO, "Step 1");
 	        PackageIndex.getTest(test);
 	    }
 	 
@@ -71,7 +72,8 @@ public class TestListener extends SeleniumInit implements ITestListener {
 	 
 	        //Extentreports log and screenshot operations for failed tests.
 	        ExtentTestManager.getTest().log(LogStatus.FAIL,"Test Failed",
-	                ExtentTestManager.getTest().addBase64ScreenShot(base64Screenshot));
+	                ExtentTestManager.getTest().addBase64ScreenShot(base64Screenshot));      
+	        
 	    }
 	 
 	    @Override

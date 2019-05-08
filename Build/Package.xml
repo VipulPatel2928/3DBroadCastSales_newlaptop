@@ -41,7 +41,13 @@
 			class-name="com.automation.utility.CustomReporterTestDetails" />
 
 	<listener class-name="com.automation.utility.TestListener" />
-	<listener class-name="com.automation.utility.AnnotationTransformer" />
+	<!-- <listener class-name="com.automation.utility.AnnotationTransformer" /> -->
+	
+	<listener class-name="com.automation.utility.RetryListenerClass" />
+	
+	
+	
+	
 			
 	</listeners>
 

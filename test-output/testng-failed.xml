@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="1" guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Failed suite [3DBroadCastSales_Functional_Test_Suite]]" parallel="tests">
+<suite thread-count="1" verbose="0" name="Failed suite [3DBroadCastSales_Functional_Test_Suite]" parallel="tests">
   <parameter name="selenium.port" value="4444"/>
   <parameter name="selenium.host" value="localhost"/>
   <parameter name="selenium.browser" value="chrome"/>
@@ -15,9 +15,9 @@
     <listener class-name="com.automation.utility.CustomReporterTestskipDetails"/>
     <listener class-name="com.automation.utility.CustomReporterTestDetails"/>
     <listener class-name="com.automation.utility.TestListener"/>
-    <listener class-name="com.automation.utility.AnnotationTransformer"/>
+    <listener class-name="com.automation.utility.RetryListenerClass"/>
   </listeners>
-  <test thread-count="1" verbose="0" name="TC_LogIn_02: Verify User LogIn functionality(failed)(failed)" parallel="tests">
+  <test thread-count="1" verbose="0" name="TC_LogIn_02: Verify User LogIn functionality(failed)" parallel="tests">
     <classes>
       <class name="com.automation.index.PackageIndex">
         <methods>
@@ -30,5 +30,5 @@
         </methods>
       </class> <!-- com.automation.index.PackageIndex -->
     </classes>
-  </test> <!-- TC_LogIn_02: Verify User LogIn functionality(failed)(failed) -->
-</suite> <!-- Failed suite [Failed suite [3DBroadCastSales_Functional_Test_Suite]] -->
+  </test> <!-- TC_LogIn_02: Verify User LogIn functionality(failed) -->
+</suite> <!-- Failed suite [3DBroadCastSales_Functional_Test_Suite] -->

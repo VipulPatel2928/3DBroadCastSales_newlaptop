@@ -15,7 +15,7 @@
     <listener class-name="com.automation.utility.CustomReporterTestskipDetails"/>
     <listener class-name="com.automation.utility.CustomReporterTestDetails"/>
     <listener class-name="com.automation.utility.TestListener"/>
-    <listener class-name="com.automation.utility.AnnotationTransformer"/>
+    <listener class-name="com.automation.utility.RetryListenerClass"/>
   </listeners>
   <test thread-count="1" verbose="0" name="TC_LogIn_02: Verify User LogIn functionality(failed)" parallel="tests">
     <classes>
