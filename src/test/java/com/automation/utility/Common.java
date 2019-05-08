@@ -290,8 +290,9 @@ public class Common {
 			 * "failsafe-reports" + File.separator + "firefox" + File.separator;
 			 */
 			
+			
 			//    E:/Project/eSign/test-output/Screenshot
-			String reportFolder = "C:/Users/admin/eclipse-workspace/3DBroadCastSales_v1.0/test-output" + File.separator;
+			String reportFolder = "C:/Users/User/eclipse-workspace/3DBroadCastSales/test-output" + File.separator;
 			String screenshotsFolder = "screenshots";
 			File screenshotFolder = new File(reportFolder + screenshotsFolder);
 			if (!screenshotFolder.getAbsoluteFile().exists()) {
