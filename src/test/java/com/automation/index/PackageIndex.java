@@ -93,18 +93,20 @@ public class PackageIndex extends SeleniumInit {
 	@Test
 	public void TC_LogIn_02() {
 		step = 1;
-
+        String step_extend_report_msg;
 		Common.logcase(" ");
 
 		Common.logcase("TEST CASE:TC_LogIn_02::To verify That user is able to Login with the valid details");
 		
 		test_package.log(LogStatus.INFO, "TEST CASE:TC_LogIn_02::To verify That user is able to Login with the valid details");
 
-		Common.logstep("Step" + (step++) + ": Open the Url---> https://staging.3dbroadcastsales.com/");
+		step_extend_report_msg ="Step" + (step++) + ": Open the Url---> https://staging.3dbroadcastsales.com/";
 		
-		logger.log(Status.INFO, "Open the Url---> https://staging.3dbroadcastsales.com/");
+		Common.logstep(step_extend_report_msg);
 		
-		test_package.log(LogStatus.INFO,"Step\" + (step++) + \": Open the Url---> https://staging.3dbroadcastsales.com/");
+		logger.log(Status.INFO, step_extend_report_msg);//for another extent report
+		
+		test_package.log(LogStatus.INFO,step_extend_report_msg);// for new extent report
 		
 		
 		if (packageVerification.homepageverify()) {
